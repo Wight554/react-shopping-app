@@ -1,13 +1,13 @@
 {
-  "name": "react-cources",
+  "name": "react-courses",
   "version": "1.0.0",
   "main": "src/index.jsx",
-  "description": "Training react project.",
+  "description": "Template react project.",
   "author": "gennadiilu",
   "license": "MIT",
-  "homepage": "https://github.com/gennadiilu/react-cources",
-  "bugs": "https://github.com/gennadiilu/react-cources/issues",
-  "repository": "https://github.com/gennadiilu/react-cources.git",
+  "homepage": "https://github.com/Wight554/react-courses",
+  "bugs": "https://github.com/Wight554/react-courses/issues",
+  "repository": "https://github.com/Wight554/react-courses.git",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"

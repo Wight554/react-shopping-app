@@ -1,3 +1,3 @@
-# react-cources
+# react-courses
 
 Template react project.

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import Header from '../Header';
 import Catalog from '../pages/Catalog';
 import Basket from '../pages/Basket';
 import Order from '../pages/Order';
@@ -11,6 +12,7 @@ const displayName = 'App';
 export default function App() {
   return (
     <>
+      <Header />
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Catalog} />

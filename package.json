@@ -43,20 +43,5 @@
     "webpack-cli": "3.3.5",
     "webpack-dev-server": "3.7.2",
     "webpack-manifest-plugin": "2.0.4"
-  },
-  "lint-staged": {
-    "*.{js,json,jsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

@@ -1,13 +1,13 @@
 {
-  "name": "react-courses",
+  "name": "react-shopping-app",
   "version": "1.0.0",
   "main": "src/index.jsx",
   "description": "Template react project.",
   "author": "gennadiilu",
   "license": "MIT",
-  "homepage": "https://github.com/Wight554/react-courses",
-  "bugs": "https://github.com/Wight554/react-courses/issues",
-  "repository": "https://github.com/Wight554/react-courses.git",
+  "homepage": "https://github.com/Wight554/react-shopping-app",
+  "bugs": "https://github.com/Wight554/react-shopping-app/issues",
+  "repository": "https://github.com/Wight554/react-shopping-app.git",
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm-run-all --parallel start:mockserver start:app",

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CatalogStyle from './CatalogStyle';
 import CatalogItem from '../../CatalogItem';
 
 const displayName = 'Catalog';
@@ -14,11 +15,11 @@ const propTypes = {
 
 function Catalog({ myProducts }) {
   return (
-    <div>
+    <CatalogStyle>
       {myProducts.map(product => (
         <CatalogItem key={product.id} {...product} />
       ))}
-    </div>
+    </CatalogStyle>
   );
 }
 

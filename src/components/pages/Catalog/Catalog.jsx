@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CatalogStyle from './CatalogStyle';
+import MasterPage from '../MasterPage';
 import CatalogItem from '../../CatalogItem';
+import HeaderBasket from '../../HeaderBasket';
 
 const displayName = 'Catalog';
 
@@ -15,11 +17,13 @@ const propTypes = {
 
 function Catalog({ myProducts }) {
   return (
-    <CatalogStyle>
-      {myProducts.map(product => (
-        <CatalogItem key={product.id} {...product} />
-      ))}
-    </CatalogStyle>
+    <MasterPage HeaderItem={HeaderBasket} pageTitle="Catalog">
+      <CatalogStyle>
+        {myProducts.map(product => (
+          <CatalogItem key={product.id} {...product} />
+        ))}
+      </CatalogStyle>
+    </MasterPage>
   );
 }
 

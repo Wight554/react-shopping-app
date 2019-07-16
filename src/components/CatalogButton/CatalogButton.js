@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-const CatalogButtonStyle = styled.button`
+const CatalogButton = styled.button.attrs({
+  type: 'button'
+})`
   background-color: #fff;
   &:focus {
     outline: none;
   }
 `;
 
-export default CatalogButtonStyle;
+export default CatalogButton;

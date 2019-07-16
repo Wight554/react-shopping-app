@@ -1,3 +1,3 @@
-import CatalogItem from './CatalogItem';
+import CatalogItemContainer from './CatalogItemContainer';
 
-export default CatalogItem;
+export default CatalogItemContainer;

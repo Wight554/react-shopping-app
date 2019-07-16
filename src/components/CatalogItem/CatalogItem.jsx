@@ -10,16 +10,17 @@ const displayName = 'CatalogItem';
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  handleAddProduct: PropTypes.func.isRequired
 };
 
-export default function CatalogItem({ name, price }) {
+export default function CatalogItem({ name, price, handleAddProduct }) {
   return (
     <CatalogItemStyle>
       <ItemLogo />
       <ItemProduct>{name}</ItemProduct>
       <CatalogPrice>{`${price}$`}</CatalogPrice>
-      <CatalogButton>Buy</CatalogButton>
+      <CatalogButton onClick={handleAddProduct}>Buy</CatalogButton>
     </CatalogItemStyle>
   );
 }

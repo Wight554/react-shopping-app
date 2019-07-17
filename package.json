@@ -33,6 +33,7 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
+    "redux-form": "^8.2.4",
     "redux-immutable": "^4.0.0",
     "redux-promise-middleware": "^6.1.1",
     "redux-thunk": "^2.3.0",
@@ -64,7 +65,7 @@
     "jest": "^24.8.0",
     "lint-staged": "9.2.0",
     "prettier-eslint-cli": "5.0.0",
-    "webpack": "4.35.3",
+    "webpack": "4.36.1",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.7.2",
     "webpack-manifest-plugin": "2.0.4"

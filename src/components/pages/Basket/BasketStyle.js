@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-const CatalogStyle = styled.div`
+const BasketStyle = styled.div`
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
   & > div {
     margin: 10px;
   }
 `;
 
-export default CatalogStyle;
+export default BasketStyle;

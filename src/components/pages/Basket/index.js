@@ -1,3 +1,3 @@
-import Basket from './Basket';
+import BasketContainer from './BasketContainer';
 
-export default Basket;
+export default BasketContainer;

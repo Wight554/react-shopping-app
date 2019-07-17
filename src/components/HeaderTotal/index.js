@@ -1,3 +1,3 @@
-import HeaderTotal from './HeaderTotal';
+import HeaderTotalContainer from './HeaderTotalContainer';
 
-export default HeaderTotal;
+export default HeaderTotalContainer;

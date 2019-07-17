@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BasketStyle from './BasketStyle';
 import MasterPage from '../MasterPage';
+import BasketButton from '../../BasketButton';
 import BasketItem from '../../BasketItem';
 import HeaderTotal from '../../HeaderTotal';
 
@@ -32,6 +33,7 @@ export default function Basket({ basket, basketProducts }) {
           />
         ))}
       </BasketStyle>
+      <BasketButton>Order</BasketButton>
     </MasterPage>
   );
 }

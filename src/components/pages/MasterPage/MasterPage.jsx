@@ -6,13 +6,14 @@ import Header from '../../Header';
 const displayName = 'MasterPage';
 
 const propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element]).isRequired,
+  // .element.isRequired,
   HeaderItem: PropTypes.elementType,
   pageTitle: PropTypes.string.isRequired
 };
 
 const defaultProps = {
-  HeaderItem: null
+  HeaderItem: React.Fragment
 };
 
 export default function MasterPage({ children, HeaderItem, pageTitle }) {

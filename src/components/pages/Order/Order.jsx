@@ -1,9 +1,18 @@
 import React from 'react';
+import OrderStyle from './OrderStyle';
+import MasterPage from '../MasterPage';
 
 const displayName = 'Order';
 
-export default function Basket() {
-  return <></>;
+const propTypes = {};
+
+export default function Order() {
+  return (
+    <MasterPage pageTitle="Order">
+      <OrderStyle />
+    </MasterPage>
+  );
 }
 
-Basket.displayName = displayName;
+Order.displayName = displayName;
+Order.propTypes = propTypes;

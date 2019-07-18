@@ -33,7 +33,7 @@ export default function Basket({ basket, basketProducts }) {
           />
         ))}
       </BasketStyle>
-      <BasketButton>Order</BasketButton>
+      <BasketButton to="/order">Order</BasketButton>
     </MasterPage>
   );
 }

@@ -1,9 +1,12 @@
-import React from 'react';
+import styled from 'styled-components';
 
-const displayName = 'OrderButton';
+const OrderButton = styled.button.attrs({
+  type: 'button'
+})`
+  background-color: #fff;
+  &:focus {
+    outline: none;
+  }
+`;
 
-export default function OrderButton() {
-  return <></>;
-}
-
-OrderButton.displayName = displayName;
+export default OrderButton;

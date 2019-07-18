@@ -10,7 +10,9 @@ const displayName = 'Catalog';
 const propTypes = {
   myProducts: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string.isRequired
+      id: PropTypes.number,
+      name: PropTypes.string,
+      price: PropTypes.number
     }).isRequired
   ).isRequired
 };

@@ -4,9 +4,9 @@ import addProduct from '../actions/addProduct';
 import removeProduct from '../actions/removeProduct';
 import changeProductCount from '../actions/changeProductCount';
 
-export const initialBasketProductsState = List();
+export const initialBasketState = List();
 
-export const basketProducts = handleActions(
+export const basket = handleActions(
   {
     [addProduct]: (state, action) => {
       const targetMapIdx = state.findIndex(item => item.get('id') === action.payload.id);
@@ -19,5 +19,5 @@ export const basketProducts = handleActions(
       return state.setIn([targetMapIdx, 'count'], action.payload.count);
     }
   },
-  initialBasketProductsState
+  initialBasketState
 );

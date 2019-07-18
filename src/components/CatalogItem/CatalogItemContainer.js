@@ -17,8 +17,8 @@ export const enhance = compose(
       )
   ),
   withHandlers({
-    handleAddProduct: ({ dispatchAddProduct, id }) => () => {
-      dispatchAddProduct(id);
+    handleAddProduct: ({ dispatchAddProduct, id, name, price }) => () => {
+      dispatchAddProduct({ id, name, price });
     }
   })
 );

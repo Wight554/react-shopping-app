@@ -1,3 +1,3 @@
-# react-courses
+# react-boilerplate
 
-Template react project.
+Boilerplate react project.

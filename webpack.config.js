@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Courses',
+      title: 'React Boilerplate',
       inject: true,
       favicon: './src/favicon.png',
       template: './src/index.ejs'
@@ -56,6 +56,7 @@ module.exports = {
     contentBase: false,
     historyApiFallback: true,
     host: '0.0.0.0',
+    noInfo: true,
     port: 3000
   }
 };

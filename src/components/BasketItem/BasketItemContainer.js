@@ -21,7 +21,7 @@ export const enhance = compose(
   withState('count', 'setCount', ({ count }) => count),
   withHandlers({
     handleChangeCount: ({ dispatchChangeCount, dispatchRemoveProduct, setCount, id }) => event => {
-      setCount(Number(event.currentTarget.value));
+      setCount(event.currentTarget.value);
       dispatchChangeCount({ id, count: Number(event.currentTarget.value) });
       if (event.currentTarget.value <= 0) {
         dispatchRemoveProduct(id);

@@ -10,22 +10,28 @@ import HeaderTotal from '../../HeaderTotal';
 const displayName = 'Basket';
 
 const propTypes = {
+  basketProducts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired,
   basket: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      count: PropTypes.number,
-      price: PropTypes.number
+      count: PropTypes.number.isRequired
     }).isRequired
   ).isRequired
 };
 
-export default function Basket({ basket }) {
+export default function Basket({ basket, basketProducts }) {
   return (
     <MasterPage HeaderItem={HeaderTotal} pageTitle="Basket">
       <BasketStyle>
-        {basket.map(product => (
-          <BasketItem key={product.id} count={product.count} {...product} />
+        {basketProducts.map(product => (
+          <BasketItem
+            key={product.id}
+            count={basket.find(basketProduct => basketProduct.id === product.id).count}
+            {...product}
+          />
         ))}
       </BasketStyle>
       <ButtonWrapper>

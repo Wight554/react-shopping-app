@@ -5,7 +5,7 @@ import promise from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import { reducer as formReducer } from 'redux-form/immutable';
 import { products, initialProductsState } from '../reducers/products';
-import { basket, initialBasketState } from '../reducers/basket';
+import { basketProducts, initialBasketProductsState } from '../reducers/basketProducts';
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -14,13 +14,13 @@ const enhancer = composeEnhancers(applyMiddleware(thunkMiddleware, promise));
 
 const initialStoreState = Map({
   products: initialProductsState,
-  basket: initialBasketState
+  basketProducts: initialBasketProductsState
 });
 
 const store = createStore(
   combineReducers({
     products,
-    basket,
+    basketProducts,
     form: formReducer
   }),
   initialStoreState,

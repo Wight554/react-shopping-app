@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getBasket = createSelector(
-  state => state.get('basket'),
+  state => state.get('basketProducts'),
   basket => basket
 );
 

@@ -4,6 +4,7 @@ import BasketStyle from './BasketStyle';
 import MasterPage from '../MasterPage';
 import BasketButton from '../../BasketButton';
 import BasketItem from '../../BasketItem';
+import ButtonWrapper from '../../ButtonWrapper';
 import HeaderTotal from '../../HeaderTotal';
 
 const displayName = 'Basket';
@@ -27,7 +28,9 @@ export default function Basket({ basket }) {
           <BasketItem key={product.id} count={product.count} {...product} />
         ))}
       </BasketStyle>
-      <BasketButton to="/order">Order</BasketButton>
+      <ButtonWrapper>
+        <BasketButton to="/order">Order</BasketButton>
+      </ButtonWrapper>
     </MasterPage>
   );
 }

@@ -13,8 +13,7 @@
     "start": "npm-run-all --parallel start:mockserver start:app",
     "start:app": "webpack-dev-server --mode development",
     "start:mockserver": "node mockServer.js",
-    "test": "jest",
-    "precommit": "lint-staged"
+    "test": "jest"
   },
   "sideEffects": false,
   "dependencies": {

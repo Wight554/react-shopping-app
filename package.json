@@ -2,7 +2,7 @@
   "name": "react-shopping-app",
   "version": "1.0.0",
   "main": "src/index.jsx",
-  "description": "Boilerplate react project.",
+  "description": "React shopping app.",
   "author": "gennadiilu",
   "license": "MIT",
   "homepage": "https://github.com/Wight554/react-shopping-app",

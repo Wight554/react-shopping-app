@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Boilerplate',
+      title: 'React Shop',
       inject: true,
       favicon: './src/favicon.png',
       template: './src/index.ejs'

@@ -1,13 +1,13 @@
 {
-  "name": "react-courses",
+  "name": "react-boilerplate",
   "version": "1.0.0",
   "main": "src/index.jsx",
-  "description": "Template react project.",
+  "description": "Boilerplate react project.",
   "author": "gennadiilu",
   "license": "MIT",
-  "homepage": "https://github.com/Wight554/react-courses",
-  "bugs": "https://github.com/Wight554/react-courses/issues",
-  "repository": "https://github.com/Wight554/react-courses.git",
+  "homepage": "https://github.com/Wight554/react-boilerplate",
+  "bugs": "https://github.com/Wight554/react-boilerplate/issues",
+  "repository": "https://github.com/Wight554/react-boilerplate.git",
   "scripts": {
     "build": "webpack --mode production",
     "start": "npm-run-all --parallel start:mockserver start:app",

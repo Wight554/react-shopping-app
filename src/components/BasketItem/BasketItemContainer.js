@@ -7,7 +7,7 @@ import removeProduct from '../../actions/removeProduct';
 
 export const handlers = {
   handleChangeCount: ({ dispatchChangeCount, dispatchRemoveProduct, setCount, id }) => event => {
-    setCount(event.currentTarget.value);
+    setCount(Number(event.currentTarget.value));
     dispatchChangeCount({ id, count: Number(event.currentTarget.value) });
     if (event.currentTarget.value <= 0) {
       dispatchRemoveProduct(id);

@@ -1,3 +1,3 @@
-import OrderForm from './OrderForm';
+import OrderFormContainer from './OrderFormContainer';
 
-export default OrderForm;
+export default OrderFormContainer;

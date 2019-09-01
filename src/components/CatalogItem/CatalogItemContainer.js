@@ -4,6 +4,12 @@ import { connect } from 'react-redux';
 import CatalogItem from './CatalogItem';
 import addProduct from '../../actions/addProduct';
 
+export const handlers = {
+  handleAddProduct: ({ dispatchAddProduct, id }) => () => {
+    dispatchAddProduct(id);
+  }
+};
+
 export const enhance = compose(
   setDisplayName('CatalogItemContainer'),
   connect(
@@ -16,11 +22,7 @@ export const enhance = compose(
         dispatch
       )
   ),
-  withHandlers({
-    handleAddProduct: ({ dispatchAddProduct, id }) => () => {
-      dispatchAddProduct(id);
-    }
-  })
+  withHandlers(handlers)
 );
 
 export default enhance(CatalogItem);

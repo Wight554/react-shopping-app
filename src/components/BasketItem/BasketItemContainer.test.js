@@ -14,7 +14,23 @@ describe('Given the BasketItemContainer enhancer', () => {
   };
 
   describe('Given a handleChangeCount handlers', () => {
-    describe('when the handleChangeCount is called', () => {
+    describe('when the handleChangeCount is called with positive count', () => {
+      const event = { currentTarget: { value: 2 } };
+      beforeEach(() => {
+        handlers.handleChangeCount(testProps)(event);
+      });
+
+      it('should call the setCount function', () => {
+        expect(testProps.setCount).toHaveBeenCalledWith(event.currentTarget.value);
+      });
+      it('should call the dispatchChangeCount function', () => {
+        expect(testProps.dispatchChangeCount).toHaveBeenCalledWith({
+          id: testProps.id,
+          count: event.currentTarget.value
+        });
+      });
+    });
+    describe('when the handleChangeCount is called with count equal to zero', () => {
       const event = { currentTarget: { value: 0 } };
       beforeEach(() => {
         handlers.handleChangeCount(testProps)(event);

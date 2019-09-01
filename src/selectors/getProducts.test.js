@@ -1,20 +1,16 @@
-import { fromJS } from 'immutable';
 import getProducts from './getProducts';
+import mockStore from '../mockStore';
 
 describe('Given the getProducts selector', () => {
-  const currentStoreState = fromJS({
-    products: [{ id: 1, name: 'Product 1', price: 1 }, { id: 2, name: 'Product 2', price: 2 }]
-  });
-
   describe('when the selector is called', () => {
     let result;
 
     beforeEach(() => {
-      result = getProducts(currentStoreState);
+      result = getProducts(mockStore.getState());
     });
 
     it('should return all products from the store', () => {
-      expect(result.equals(currentStoreState.getIn(['products']))).toBe(true);
+      expect(result.equals(mockStore.getState().getIn(['products']))).toBe(true);
     });
   });
 });

@@ -16,5 +16,6 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.(eot|otf|svg|ttf|woff|png)$': 'identity-obj-proxy'
   },
+  setupFilesAfterEnv: ['./jest.setup.js'],
   testURL: 'http://localhost/'
 };

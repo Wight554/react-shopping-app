@@ -15,7 +15,7 @@ describe('Given the products reducer', () => {
       newState = basketProducts(currentBasketProductsState, testAction);
     });
 
-    describe('and the ADD_PRODUCT action is dispatched', () => {
+    describe("and the ADD_PRODUCT action is dispatched when product doesn't exist", () => {
       beforeAll(() => {
         testAction.type = 'ADD_PRODUCT';
         testAction.payload = { id: 1 };
@@ -26,14 +26,14 @@ describe('Given the products reducer', () => {
       });
     });
 
-    describe('and the ADD_PRODUCT action is dispatched twice', () => {
+    describe('and the ADD_PRODUCT action is dispatched when product already exists', () => {
       beforeAll(() => {
         currentBasketProductsState = currentBasketProductsState.push(Map({ id: 1, count: 1 }));
         testAction.type = 'ADD_PRODUCT';
         testAction.payload = { id: 1 };
       });
 
-      it('should return a new state with the provided product', () => {
+      it('should return a new state with the provided product and incremented count', () => {
         expect(newState).toEqual(
           currentBasketProductsState.setIn(
             [currentBasketProductsState.findIndex(item => item.get('id') === testAction.payload.id), 'count'],
@@ -50,7 +50,7 @@ describe('Given the products reducer', () => {
         testAction.payload = { id: 1, count: 5 };
       });
 
-      it('should return a new state of product with the provided count', () => {
+      it('should return a new state of product with the provided product count', () => {
         expect(newState).toEqual(
           currentBasketProductsState.setIn(
             [currentBasketProductsState.findIndex(item => item.get('id') === testAction.payload.id), 'count'],
@@ -69,7 +69,7 @@ describe('Given the products reducer', () => {
       });
 
       it('should return a new state without removed product', () => {
-        expect(newState).toEqual(initialBasketProductsState);
+        expect(newState).toMatchObject(initialBasketProductsState);
       });
     });
 
@@ -80,7 +80,7 @@ describe('Given the products reducer', () => {
       });
 
       it('should return the current state', () => {
-        expect(newState).toBe(currentBasketProductsState);
+        expect(newState).toMatchObject(currentBasketProductsState);
       });
     });
   });

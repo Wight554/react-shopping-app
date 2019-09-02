@@ -9,7 +9,7 @@ describe('Given the OrderContainer enhancer', () => {
         handlers.handleSubmit(testProps)();
       });
 
-      it('should call the push function', () => {
+      it('should call the history push function', () => {
         expect(testProps.history.push).toHaveBeenCalledWith('/thankyou');
       });
     });

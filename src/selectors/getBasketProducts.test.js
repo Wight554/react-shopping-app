@@ -11,9 +11,9 @@ describe('Given the getBasketProducts selector', () => {
     });
 
     it('should return all products that match basket ones from the store', () => {
-      expect(
-        result.equals(fromJS([{ id: 1, name: 'Product 1', price: 1 }, { id: 2, name: 'Product 2', price: 2 }]))
-      ).toBe(true);
+      expect(result).toMatchObject(
+        fromJS([{ id: 1, name: 'Product 1', price: 1 }, { id: 2, name: 'Product 2', price: 2 }])
+      );
     });
   });
 });

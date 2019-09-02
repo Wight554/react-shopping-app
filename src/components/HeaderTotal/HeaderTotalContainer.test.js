@@ -25,7 +25,7 @@ describe('Given the HeaderTotalContainer enhancer', () => {
     });
 
     it('should pass provided properties', () => {
-      expect(providedProps.totalCount === getTotalCount(mockStore.getState())).toBe(true);
+      expect(providedProps.totalCount).toBe(getTotalCount(mockStore.getState()));
     });
   });
 });

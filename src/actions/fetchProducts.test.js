@@ -28,7 +28,7 @@ describe('Given the fetchProducts action', () => {
 
       it('should dispatch the FETCH_PRODUCTS async action', () => {
         expect(dispatchMock).toHaveBeenCalledTimes(1);
-        expect(action).toEqual({
+        expect(action).toMatchObject({
           type: 'FETCH_PRODUCTS',
           payload: {
             url: 'http://localhost:2000/products'

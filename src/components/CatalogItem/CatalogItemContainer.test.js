@@ -11,7 +11,7 @@ describe('Given the CatalogItemContainer enhancer', () => {
     id: 1
   };
 
-  describe('Given a handleAddProduct handlers', () => {
+  describe('Given a handleAddProduct handler', () => {
     describe('when the handleAddProduct is called', () => {
       beforeEach(() => {
         handlers.handleAddProduct(testProps)();

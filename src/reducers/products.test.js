@@ -26,7 +26,7 @@ describe('Given the products reducer', () => {
       });
 
       it('should return a new state with fetched products only', () => {
-        expect(newState).toEqual(fromJS(testAction.payload.data));
+        expect(newState).toMatchObject(fromJS(testAction.payload.data));
       });
     });
 
@@ -37,7 +37,7 @@ describe('Given the products reducer', () => {
       });
 
       it('should return the current state', () => {
-        expect(newState).toBe(currentProductsState);
+        expect(newState).toMatchObject(currentProductsState);
       });
     });
   });

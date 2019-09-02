@@ -13,13 +13,15 @@ describe('Given the BasketItemContainer enhancer', () => {
     id: 1
   };
 
-  describe('Given a handleChangeCount handlers', () => {
+  describe('Given a handleChangeCount handler', () => {
+    let event;
+    beforeEach(() => {
+      handlers.handleChangeCount(testProps)(event);
+    });
     describe('when the handleChangeCount is called with positive count', () => {
-      const event = { currentTarget: { value: 2 } };
-      beforeEach(() => {
-        handlers.handleChangeCount(testProps)(event);
+      beforeAll(() => {
+        event = { currentTarget: { value: 2 } };
       });
-
       it('should call the setCount function', () => {
         expect(testProps.setCount).toHaveBeenCalledWith(event.currentTarget.value);
       });
@@ -31,19 +33,8 @@ describe('Given the BasketItemContainer enhancer', () => {
       });
     });
     describe('when the handleChangeCount is called with count equal to zero', () => {
-      const event = { currentTarget: { value: 0 } };
-      beforeEach(() => {
-        handlers.handleChangeCount(testProps)(event);
-      });
-
-      it('should call the setCount function', () => {
-        expect(testProps.setCount).toHaveBeenCalledWith(event.currentTarget.value);
-      });
-      it('should call the dispatchChangeCount function', () => {
-        expect(testProps.dispatchChangeCount).toHaveBeenCalledWith({
-          id: testProps.id,
-          count: event.currentTarget.value
-        });
+      beforeAll(() => {
+        event = { currentTarget: { value: 0 } };
       });
       it('should call the dispatchRemoveProduct function', () => {
         expect(testProps.dispatchRemoveProduct).toHaveBeenCalledWith(testProps.id);

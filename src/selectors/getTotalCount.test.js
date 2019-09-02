@@ -9,7 +9,7 @@ describe('Given the getTotalCount selector', () => {
       result = getTotalCount(mockStore.getState());
     });
     it('should return total price of products in basket', () => {
-      expect(result === 5).toBe(true);
+      expect(result).toBe(5);
     });
   });
 });

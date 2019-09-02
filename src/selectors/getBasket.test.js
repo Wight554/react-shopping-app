@@ -10,7 +10,7 @@ describe('Given the getBasket selector', () => {
     });
 
     it('should return all basket products from the store', () => {
-      expect(result.equals(mockStore.getState().getIn(['basketProducts']))).toBe(true);
+      expect(result).toMatchObject(mockStore.getState().getIn(['basketProducts']));
     });
   });
 });

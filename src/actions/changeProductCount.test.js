@@ -14,23 +14,23 @@ describe('Given the changeProductCount action', () => {
       expect(action.type).toBe('CHANGE_PRODUCT_COUNT');
     });
 
-    describe('and product is provided', () => {
+    describe('and product data is provided', () => {
       beforeAll(() => {
         product = { id: 1, count: 2 };
       });
 
-      it('should create payload with the provided product', () => {
+      it('should create payload with the provided product data', () => {
         expect(action.payload.id).toBe(1);
         expect(action.payload.count).toBe(2);
       });
     });
 
-    describe('and product is not provided', () => {
+    describe('and product data is not provided', () => {
       beforeAll(() => {
         product = null;
       });
 
-      it('should create payload without the provided product', () => {
+      it('should create payload without the provided product data', () => {
         expect(action.payload).toBeNull();
       });
     });

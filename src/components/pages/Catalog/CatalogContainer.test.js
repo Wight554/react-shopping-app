@@ -6,10 +6,6 @@ import { enhance } from './CatalogContainer';
 import getProducts from '../../../selectors/getProducts';
 import mockStore from '../../../mockStore';
 
-jest.mock('axios', () => ({
-  get: jest.fn((url, config) => ({ url, config }))
-}));
-
 describe('Given the CatalogContainer enhancer', () => {
   describe('when the enhancer is applied', () => {
     let providedProps;

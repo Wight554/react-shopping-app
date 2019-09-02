@@ -1,9 +1,5 @@
 import fetchProducts from './fetchProducts';
 
-jest.mock('axios', () => ({
-  get: jest.fn((url, config) => ({ url, config }))
-}));
-
 describe('Given the fetchProducts action', () => {
   describe('when the action is called', () => {
     let thunk;

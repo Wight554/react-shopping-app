@@ -7,7 +7,7 @@ export const enhance = compose(
   setDisplayName('OrderFormContainer'),
   reduxForm({
     form: 'order',
-    orderValidator
+    validate: orderValidator
   })
 );
 
